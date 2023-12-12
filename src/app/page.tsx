@@ -18,14 +18,9 @@ function HomePage() {
       </h1>
       <div>
         <DessertForm />
-        {Array.isArray(desserts)
-        ? desserts.map(dessert => (
+        {desserts.map((dessert) => (
           <DessertCard key={dessert.id} dessert={dessert} />
-        ))
-        : null}
-        {/* {desserts.map((dessert) => (
-          <DessertCard key={dessert.id} dessert={dessert} />
-        ))} */}
+        ))}
       </div>
     </>
   );
