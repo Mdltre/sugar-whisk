@@ -1,5 +1,6 @@
 import React from 'react';
 import { useDesserts } from '@/context/DessertContext';
+import styles from './SingleDessertPage.module.css'; // Import a CSS module for styling
 
 const SingleDessertPage: React.FC = () => {
   const { selectedDessert, setSelectedDessert } = useDesserts();
@@ -9,13 +10,17 @@ const SingleDessertPage: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className={styles.singleDessertContainer}>
       {selectedDessert && (
-        <div>
-          <button onClick={goBack}>Go Back</button>
-          <h2>{selectedDessert.name}</h2>
+        <div className={styles.dessertDetails}>
+          <button onClick={goBack}>Back</button>
+          <h1 style={{fontSize: '2rem', fontWeight: 'bold', color: 'black', textAlign: 'center' }}>{selectedDessert.name}</h1>
+          <img 
+            src={selectedDessert.imgSrc} 
+            alt={selectedDessert.name} 
+            style={{ width: '100%', maxWidth: 'auto', height: 'auto', maxHeight: '600px' }}
+            />
           <p>{selectedDessert.description}</p>
-          <img src={selectedDessert.imgSrc} alt={selectedDessert.name} />
         </div>
       )}
     </div>

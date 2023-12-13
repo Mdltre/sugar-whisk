@@ -1,0 +1,17 @@
+/* SingleDessertPage.module.css */
+.singleDessertContainer {
+    padding: 20px;
+  }
+  
+  .dessertDetails {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .dessertDetails {
+      max-width: 100%;
+    }
+  }
+  
