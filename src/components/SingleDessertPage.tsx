@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import { useDesserts } from '@/context/DessertContext';
 import styles from './SingleDessertPage.module.css'; // Import a CSS module for styling

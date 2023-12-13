@@ -1,9 +1,10 @@
 'use client';
 import React, { useEffect } from 'react';
 import { useDesserts } from '@/context/DessertContext';
-import DessertForm from '@/components/DessertForm';
-import DessertCard from '@/components/DessertCard';
+import Layout from '@/components/Layout';
+import DessertImageCard from '@/components/DessertImageCard';
 import SingleDessertPage from '@/components/SingleDessertPage';
+import LandingPage from '@/components/LandingPage';
 
 function HomePage() {
   const { desserts, loadDesserts, selectedDessert } = useDesserts();
@@ -12,23 +13,35 @@ function HomePage() {
     loadDesserts();
   }, []);
 
+    // Function to shuffle an array
+  const shuffleArray = (array) => {
+    const shuffledArray = array.slice();
+    for (let i = shuffledArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+    }
+    return shuffledArray;
+  };
+  const randomDesserts = shuffleArray(desserts).slice(0, 3);
+
   return (
     <>
-      <h1 className='text-4xl text-center font-extralight m-6'>
-        Sugar Whisk Desserts
-      </h1>
+    <Layout>
+      <LandingPage />
       <div>
+      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
       {!selectedDessert ? (
           <>
-            <DessertForm />
-            {desserts.map((dessert) => (
-              <DessertCard key={dessert.id} dessert={dessert} />
-            ))}
+            {randomDesserts.map((dessert) => (
+          <DessertImageCard key={dessert.id} dessert={dessert} style={{ flex: '1' }} />
+        ))}
           </>
         ) : (
           <SingleDessertPage />
         )}
       </div>
+    </div>
+    </Layout>
     </>
   );
 }
