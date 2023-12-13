@@ -1,0 +1,29 @@
+/* styles/About.module.css */
+
+.aboutPage {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .peopleContainer {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .person {
+    width: 48%; /* Adjust as needed to leave some space between columns */
+    box-sizing: border-box;
+    padding: 16px;
+    border: 1px solid #ccc;
+    margin-bottom: 16px;
+  }
+  
+  .role {
+    font-style: italic;
+    color: #555;
+  }
+  
+  .description {
+    margin-top: 8px;
+  }
+  

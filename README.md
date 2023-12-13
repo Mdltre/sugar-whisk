@@ -1,6 +1,11 @@
 # *Sugar Whisk Desserts* 
 #### This is a [Next.js](https://nextjs.org/) Full Stack project by Maria Jose P. Dela Torre & Jaspreet Kaur.
 
+Clone the repository using:
+```bash
+git clone https://github.com/Mdltre/sugar-whisk.git
+```
+
 ## Set Up
 
 1. First, make a **.env file** and place the following:
@@ -28,17 +33,12 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Tech Stack
+Below is the list of tools we used to build and run this web application.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Next.js 14: A frontend and backend framework for React applications.
+2. Prisma: An ORM (Object-Relational Mapping) tool for interacting with databases.
+3. SQLite3: A lightweight, serverless, and self-contained SQL database engine.
+4. TypeScript: A statically typed superset of JavaScript.
+5. TailwindCSS: A utility-first CSS framework.
+6. Jest: A JavaScript testing framework.
