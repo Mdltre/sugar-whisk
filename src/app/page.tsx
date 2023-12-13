@@ -3,9 +3,10 @@ import React, { useEffect } from 'react';
 import { useDesserts } from '@/context/DessertContext';
 import DessertForm from '@/components/DessertForm';
 import DessertCard from '@/components/DessertCard';
+import SingleDessertPage from '@/components/SingleDessertPage';
 
 function HomePage() {
-  const { desserts, loadDesserts } = useDesserts();
+  const { desserts, loadDesserts, selectedDessert } = useDesserts();
 
   useEffect(() => {
     loadDesserts();
@@ -17,10 +18,16 @@ function HomePage() {
         Sugar Whisk Desserts
       </h1>
       <div>
-        <DessertForm />
-        {desserts.map((dessert) => (
-          <DessertCard key={dessert.id} dessert={dessert} />
-        ))}
+      {!selectedDessert ? (
+          <>
+            <DessertForm />
+            {desserts.map((dessert) => (
+              <DessertCard key={dessert.id} dessert={dessert} />
+            ))}
+          </>
+        ) : (
+          <SingleDessertPage />
+        )}
       </div>
     </>
   );

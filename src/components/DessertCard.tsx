@@ -9,6 +9,10 @@ import { RiDeleteBin6Fill } from 'react-icons/ri';
 function DessertCard({ dessert }: { dessert: Dessert }) {
   const { deleteDessert, setSelectedDessert } = useDesserts();
 
+  const handleViewSingleDessert = () => {
+    setSelectedDessert(dessert);
+  };
+
   return (
     <div
       key={dessert.id}
@@ -42,6 +46,7 @@ function DessertCard({ dessert }: { dessert: Dessert }) {
         >
           <RiDeleteBin6Fill className='text-red-500 hover:text-red-800' />
         </button>
+        <button onClick={handleViewSingleDessert}>View</button>
       </div>
     </div>
   );
