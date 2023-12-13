@@ -20,7 +20,7 @@ function DessertCard({ dessert }: { dessert: Dessert }) {
       className='bg-zinc-700 w-1/3 flex justify-between m-auto rounded-md my-3 p-4'
     >
       <div className=''>
-        <img src={dessert.imgSrc}></img>
+        <img src={dessert.imgSrc} className={dessert.name}></img>
         <h2 className='text-xl font-bold uppercase'>{dessert.name}</h2>
         <p className='text-lg'>{dessert.description}</p>
         <p className='text-xs'>
