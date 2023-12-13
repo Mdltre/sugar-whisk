@@ -19,7 +19,7 @@ function DessertForm() {
 
   return (
     <form
-      className='flex flex-col m-auto w-1/3 bg-zinc-900 p-4 rounded-md'
+      className='flex flex-col m-auto w-1/3 bg-pink-900 p-4 rounded-md'
       onSubmit={async (e) => {
         e.preventDefault();
         if (selectedDessert) {
@@ -46,7 +46,7 @@ function DessertForm() {
         name='name'
         autoFocus
         placeholder='Name'
-        className='bg-zinc-800 p-2 rounded-md my-2 w-full'
+        className='bg-pink-800 p-2 rounded-md my-2 w-full'
         onChange={(e) => setName(e.target.value)}
         value={name}
       />
@@ -55,7 +55,7 @@ function DessertForm() {
         name='description'
         placeholder='Description'
         rows={3}
-        className='bg-zinc-800 p-2 rounded-md my-2 w-full'
+        className='bg-pink-800 p-2 rounded-md my-2 w-full'
         onChange={(e) => setDescription(e.target.value)}
         value={description}
       />
@@ -64,7 +64,7 @@ function DessertForm() {
         name='imgsrc'
         placeholder='ImgSrc'
         rows={3}
-        className='bg-zinc-800 p-2 rounded-md my-2 w-full'
+        className='bg-pink-800 p-2 rounded-md my-2 w-full'
         onChange={(e) => setImgSrc(e.target.value)}
         value={imgSrc}
       />
@@ -72,14 +72,14 @@ function DessertForm() {
       <div className='flex justify-end gap-x-2'>
         <button
           type='submit'
-          className='bg-zinc-800 p-2 mt-4 rounded-md hover:bg-zinc-500 transition duration-500 ease-in-out disabled:opacity-50 disabled:cursor-not-allowed'
+          className='bg-pink-800 p-2 mt-4 rounded-md hover:bg-pink-500 transition duration-500 ease-in-out disabled:opacity-50 disabled:cursor-not-allowed'
           disabled={!name || !description || !imgSrc}
         >
           {selectedDessert ? 'Edit Dessert' : 'Add Dessert'}
         </button>
         {selectedDessert && (
           <button
-            className='bg-zinc-500 p-2 mt-4 rounded-md hover:bg-zinc-700 transition duration-500 ease-in-out'
+            className='bg-pink-500 p-2 mt-4 rounded-md hover:bg-pink-700 transition duration-500 ease-in-out'
             type='button'
             onClick={() => {
               setSelectedDessert(null);

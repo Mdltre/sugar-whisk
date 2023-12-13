@@ -17,7 +17,7 @@ function DessertCard({ dessert }: { dessert: Dessert }) {
   return (
     <div
       key={dessert.id}
-      className='bg-zinc-700 w-1/3 flex justify-between m-auto rounded-md my-3 p-4'
+      className='bg-pink-700 w-1/3 flex justify-between m-auto rounded-md my-3 p-4'
     >
       <div className=''>
         <img src={dessert.imgSrc} className={dessert.name}></img>
