@@ -14,7 +14,7 @@ function DessertCard({ dessert }: { dessert: Dessert }) {
   return (
     <div
       key={dessert.id}
-      className='bg-zinc-700 w-1/3 m-auto rounded-md my-3 p-4'
+      className='bg-pink-200 w-1/3 m-auto rounded-md my-3 p-4'
     >
       {/* <img src={dessert.imgSrc} alt={dessert.name} className='w-full h-auto' /> */}
       {/* You can add a click event handler to the image if needed */}
