@@ -5,13 +5,14 @@ import { Dessert } from '@prisma/client';
 import { useDesserts } from '@/context/DessertContext';
 import { MdEditNote } from 'react-icons/md';
 import { RiDeleteBin6Fill } from 'react-icons/ri';
+// import SingleDessertPage from './SingleDessertPage';
 
 function DessertCard({ dessert }: { dessert: Dessert }) {
   const { deleteDessert, setSelectedDessert } = useDesserts();
 
-  const handleViewSingleDessert = () => {
-    setSelectedDessert(dessert);
-  };
+  // const handleViewSingleDessert = () => {
+  //   setSelectedDessert(dessert);
+  // };
 
   return (
     <div
@@ -46,7 +47,9 @@ function DessertCard({ dessert }: { dessert: Dessert }) {
         >
           <RiDeleteBin6Fill className='text-red-500 hover:text-red-800' />
         </button>
-        <button onClick={handleViewSingleDessert}>View</button>
+        <button>
+        <a href="">View</a>
+        </button>
       </div>
     </div>
   );
